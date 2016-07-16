@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html ng-app="chatApp">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body ng-controller="mainCtrl">
+
+    <form ng-submit="postChat()">
+      <input ng-model="newChat" />
+      <input type="submit" value="Submit" />
+    </form>
+    <div ng-repeat="chat in chats">
+      <li>{{chat.body}}</li>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="app.js"></script>
+    <script src="mainCtrl.js"></script>
+    <script src="mainServ.js"></script>
+  </body>
+</html>
