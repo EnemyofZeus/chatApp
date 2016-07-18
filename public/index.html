@@ -9,6 +9,7 @@
     <form ng-submit="postChat()">
       <input ng-model="newChat" />
       <input type="submit" value="Submit" />
+      <button ng-click="destroyChat()">No more</button>
     </form>
     <div ng-repeat="chat in chats">
       <li>{{chat.body}}</li>

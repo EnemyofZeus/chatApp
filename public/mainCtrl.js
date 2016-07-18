@@ -13,5 +13,11 @@ angular.module("chatApp").controller("mainCtrl", function($scope, mainServ){
     .then(function(res){
       $scope.getChat();
     })
+  };
+  $scope.destroyChat = function(){
+    mainServ.destroyChat()
+    .then(function(res){
+      return res;
+    })
   }
 });
